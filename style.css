@@ -8,6 +8,7 @@
 
 body {
   font-family: "Raleway", sans-serif;
+  background-image: url(bgim.jpg);
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -39,7 +40,11 @@ h1 {
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
-  background-color: #ddd;
+  background-color: #ac69fe;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .buttons,
@@ -63,12 +68,12 @@ button:hover {
 }
 
 .dark-mode {
-  background-color: #aaa;
+  background-image: url(dbg.jpg);
   color: white;
 }
 
 .dark-mode .quote {
-  background-color: #34495e;
+  background-color: #592e8e;
 }
 
 @media (max-width: 600px) {

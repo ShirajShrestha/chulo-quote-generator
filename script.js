@@ -92,11 +92,17 @@ random.addEventListener("click", () => {
 let fontsize = 1;
 
 increase.addEventListener("click", () => {
-  fontsize += 0.1;
+  //   fontsize += 0.1;
+  fontsize = Math.min(1.7, fontsize + 0.1);
   quoteText.style.fontSize = `${fontsize}em`;
 });
 
 decrease.addEventListener("click", () => {
   fontsize = Math.max(1, fontsize - 0.1);
   quoteText.style.fontSize = `${fontsize}em`;
+});
+
+// Toggle mode
+themeToggle.addEventListener("change", () => {
+  body.classList.toggle("dark-mode");
 });
