@@ -44,3 +44,18 @@ const quotes = {
     },
   ],
 };
+
+let category = "science";
+let index = 0;
+
+const quoteText = document.getElementById("quote-text"),
+  categorySelect = document.getElementById("category"),
+  themeToggle = document.getElementById("theme-toggle"),
+  body = document.body;
+
+const displayQuote = () => {
+  const quote = quotes[category][index];
+  quoteText.innerHTML = `${quote.quote}<br><br> <strong>${quote.author}</strong>`;
+};
+
+displayQuote();
