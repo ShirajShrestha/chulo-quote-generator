@@ -5,5 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quote Generator</title>
   </head>
-  <body></body>
+  <body>
+    <div class="main-wrapper">
+      <h1>Quote Generator</h1>
+
+      <div class="category">
+        <span>
+          <label for="category">Categories:</label>
+          <select id="category">
+            <option value="science">Science</option>
+            <option value="life">Motivation</option>
+          </select>
+
+          <div class="theme-switch">
+            <label for="theme-toggle">Dark Mode:</label>
+            <input type="checkbox" id="theme-toggle" />
+          </div>
+
+          <div id="quote" class="quote">
+            <p id="quote-text"></p>
+          </div>
+
+          <div class="buttons">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+            <button id="random">Random</button>
+          </div>
+
+          <div class="font-size">
+            <button id="increase">Increase Font Size</button>
+            <button id="decrease">Decrease Font Size</button>
+          </div>
+        </span>
+      </div>
+    </div>
+  </body>
 </html>
