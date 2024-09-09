@@ -51,6 +51,11 @@ let index = 0;
 const quoteText = document.getElementById("quote-text"),
   categorySelect = document.getElementById("category"),
   themeToggle = document.getElementById("theme-toggle"),
+  prev = document.getElementById("prev"),
+  next = document.getElementById("next"),
+  random = document.getElementById("random"),
+  increase = document.getElementById("increase"),
+  decrease = document.getElementById("decrease"),
   body = document.body;
 
 const displayQuote = () => {
@@ -64,5 +69,21 @@ displayQuote();
 categorySelect.addEventListener("change", (e) => {
   category = e.target.value;
   index = 0;
+  displayQuote();
+});
+
+// Change quotes
+prev.addEventListener("click", () => {
+  index = (index - 1 + quotes[category].length) % quotes[category].length;
+  displayQuote();
+});
+
+next.addEventListener("click", () => {
+  index = (index + 1) % quotes[category].length;
+  displayQuote();
+});
+
+random.addEventListener("click", () => {
+  index = Math.floor(Math.random() * quotes[category].length);
   displayQuote();
 });
