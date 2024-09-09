@@ -59,3 +59,10 @@ const displayQuote = () => {
 };
 
 displayQuote();
+
+// Change category
+categorySelect.addEventListener("change", (e) => {
+  category = e.target.value;
+  index = 0;
+  displayQuote();
+});
